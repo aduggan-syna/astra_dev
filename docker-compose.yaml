@@ -16,5 +16,4 @@ services:
         target: /tmp/cache
         tmpfs:
           size: 1000000000
-    command:
-      bash -c "sudo chown -R syna:syna /home/syna"
+    command: bash -c "sudo chown -R syna:syna /home/syna"
