@@ -2,7 +2,7 @@ version: '3.9'
 services:
   astra_dev:
     container_name: astra_dev
-    image: ghcr.io/aduggan-syna/astra_dev:v1.5.0
+    image: ghcr.io/aduggan-syna/astra_dev:v1.6.0
     platform: linux/arm64
     restart: unless-stopped
     network_mode: host
