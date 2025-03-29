@@ -16,8 +16,12 @@ RUN apt-get update \
         && apt install -y build-essential python3 python3-pip python3-dev git cmake sudo ninja-build vim \
         curl nano 
 
-RUN useradd -m -s /bin/bash myuser && \
-        echo "syna ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN echo "syna ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
 
 USER syna
 
